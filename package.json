@@ -4,7 +4,9 @@
   "description": "Paris-building playground in ThreeJS",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "webpack",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js -e ts --exec \"npm run compile\"",
+    "server": "py -m http.server -d dist"
   },
   "keywords": [
     "architecture",
@@ -12,5 +14,12 @@
     "exercise"
   ],
   "author": "Mikhail Gilev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
 }
