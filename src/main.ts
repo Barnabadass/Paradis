@@ -1,3 +1,5 @@
+import { Paradis } from './game/Paradis';
+
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("Code loaded!");
+	new Paradis();
 });
